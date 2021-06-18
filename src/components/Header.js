@@ -10,7 +10,7 @@ const Header = () => {
         heading: "text-2xl font-extrabold",
     };
     const darkClasses = {
-        wrapper: "text-white bg-darkbluebg",
+        wrapper: "text-white bg-darkblue",
     };
 
     return (
@@ -19,7 +19,7 @@ const Header = () => {
         >
             <h1 className={classes.heading}>Where in the world?</h1>
             <button type="button" onClick={changeTheme}>
-                Dark mode
+                {dark ? "Light Mode" : "Dark Mode"}
             </button>
         </header>
     );
