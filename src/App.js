@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Country from "./components/Country";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/Header";
+
+const fetchData = async url => {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [countries, setCountries] = useState([]);
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        fetchData("https://restcountries.eu/rest/v2/all").then(data => {
+            setCountries(data);
+            setLoading(false);
+        });
+    }, []);
+    return (
+        <ThemeProvider>
+            <div className="App">
+                <Header />
+                <ul>
+                    {countries.map(country => (
+                        <Country country={country} />
+                    ))}
+                </ul>
+            </div>
+        </ThemeProvider>
+    );
 }
 
 export default App;
