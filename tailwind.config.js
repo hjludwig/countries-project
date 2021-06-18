@@ -13,7 +13,11 @@ module.exports = {
             lightgray: "hsl(0, 0%, 98%)",
             white: "hsl(0, 0%, 100%)",
         },
-        extend: {},
+        extend: {
+            zIndex: {
+                "-1": "-1",
+            },
+        },
     },
     variants: {
         extend: {},

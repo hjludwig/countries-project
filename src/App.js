@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Country from "./components/Country";
+import Countries from "./components/Countries";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
 
@@ -23,11 +23,7 @@ function App() {
         <ThemeProvider>
             <div className="App">
                 <Header />
-                <ul>
-                    {countries.map(country => (
-                        <Country country={country} />
-                    ))}
-                </ul>
+                <Countries countries={countries} />
             </div>
         </ThemeProvider>
     );

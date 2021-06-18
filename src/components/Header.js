@@ -5,20 +5,19 @@ const Header = () => {
     const dark = useTheme().dark;
     const changeTheme = useTheme().changeTheme;
 
-    const lightClasses = {
-        wrapper: "text-blue",
-        heading: "text-lg",
+    const classes = {
+        wrapper: "text-darkbluetext flex justify-between p-4 shadow-md",
+        heading: "text-2xl font-extrabold",
     };
     const darkClasses = {
         wrapper: "text-white bg-darkbluebg",
-        heading: "text-lg",
     };
 
     return (
-        <header className={dark ? darkClasses.wrapper : lightClasses.wrapper}>
-            <h1 className={dark ? darkClasses.heading : lightClasses.heading}>
-                Where in the world?
-            </h1>
+        <header
+            className={`${classes.wrapper} ${dark ? darkClasses.wrapper : ""}`}
+        >
+            <h1 className={classes.heading}>Where in the world?</h1>
             <button type="button" onClick={changeTheme}>
                 Dark mode
             </button>
