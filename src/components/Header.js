@@ -6,7 +6,8 @@ const Header = () => {
     const changeTheme = useTheme().changeTheme;
 
     const classes = {
-        wrapper: "text-darkbluetext flex justify-between p-4 shadow-md",
+        wrapper:
+            "text-darkbluetext flex justify-between p-4 shadow-md relative z-10",
         heading: "text-2xl font-extrabold",
     };
     const darkClasses = {

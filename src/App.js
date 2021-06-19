@@ -22,7 +22,7 @@ function App() {
     }, []);
     return (
         <ThemeProvider>
-            <div className="App">
+            <div>
                 <Header />
                 <Countries countries={countries} />
             </div>
