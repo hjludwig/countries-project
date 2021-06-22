@@ -17,6 +17,9 @@ module.exports = {
             zIndex: {
                 "-1": "-1",
             },
+            gridTemplateColumns: {
+                flags: "repeat(auto-fill, 256px)",
+            },
         },
     },
     variants: {

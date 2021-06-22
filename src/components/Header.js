@@ -6,8 +6,8 @@ const Header = () => {
     const changeTheme = useTheme().changeTheme;
 
     const classes = {
-        wrapper:
-            "text-darkbluetext flex justify-between p-4 shadow-md relative z-10",
+        wrapper: "text-darkbluetext p-4 shadow-md relative z-10",
+        header: "flex justify-between max-w-7xl mx-auto",
         heading: "text-2xl font-extrabold",
     };
     const darkClasses = {
@@ -15,14 +15,16 @@ const Header = () => {
     };
 
     return (
-        <header
+        <div
             className={`${classes.wrapper} ${dark ? darkClasses.wrapper : ""}`}
         >
-            <h1 className={classes.heading}>Where in the world?</h1>
-            <button type="button" onClick={changeTheme}>
-                {dark ? "Light Mode" : "Dark Mode"}
-            </button>
-        </header>
+            <header className={classes.header}>
+                <h1 className={classes.heading}>Where in the world?</h1>
+                <button type="button" onClick={changeTheme}>
+                    {dark ? "Light Mode" : "Dark Mode"}
+                </button>
+            </header>
+        </div>
     );
 };
 
