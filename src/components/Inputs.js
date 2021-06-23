@@ -18,9 +18,9 @@ const Inputs = ({ countriesData, handleChange, value }) => {
 
     const classes = {
         wrapper: "pt-8 py-4 bg-lightgray",
-        form: "max-w-7xl mx-auto flex justify-between",
+        form: "max-w-7xl mx-auto flex flex-col gap-4 justify-between md:flex-row md:gap-0 px-4 md:p-8 2xl:px-0",
         search: "relative text-darkgray",
-        searchInput: "p-4 pl-16 shadow rounded-md w-96 bg-white",
+        searchInput: "p-4 pl-16 shadow rounded-md w-full md:w-96 bg-white",
         select: "w-56 text-darkgray",
         selectTop:
             "bg-white rounded-md shadow p-4 flex justify-between align-center w-full",

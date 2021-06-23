@@ -3,7 +3,8 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const Country = ({ country, setSingleCountry }) => {
     const classes = {
-        country: "w-64 rounded-md overflow-hidden shadow",
+        country:
+            "w-64 rounded-md overflow-hidden shadow cursor-pointer hover:shadow-lg",
         flagwrapper: "h-36 overflow-hidden relative",
         flag: "w-full h-full object-cover object-center",
         text: "bg-white p-6 text-sm",

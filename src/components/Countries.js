@@ -11,12 +11,12 @@ const Countries = ({
 }) => {
     const dark = useTheme().dark;
     const classes = {
-        wrapper: "bg-lightgray p-10 min-h-screen",
+        wrapper: "bg-lightgray px-4 md:px-10 py-10 md:py-20 min-h-screen",
         countries: "max-w-7xl m-auto",
-        list: "flex flex-wrap lg:justify-between justify-around gap-x-8 gap-y-20",
+        list: "flex flex-wrap lg:justify-between justify-around gap-x-4 gap-y-10 md:gap-x-8 md:gap-y-20",
     };
     const darkClasses = {
-        wrapper: "bg-darkbluebg text-white p-10 min-h-screen",
+        wrapper: "bg-darkbluebg text-white px-10 py-20 min-h-screen",
     };
     return (
         <div className={dark ? darkClasses.wrapper : classes.wrapper}>

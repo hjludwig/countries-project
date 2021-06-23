@@ -15,7 +15,6 @@ function App() {
     const [countriesData, setCountriesData] = useState();
     const [loading, setLoading] = useState(true);
     const [value, setValue] = useState("");
-    // const [isSingle, setIsSingle] = useState(false);
     const [singleCountry, setSingleCountry] = useState();
 
     useEffect(() => {
@@ -45,7 +44,7 @@ function App() {
                 countriesData.filter(country => {
                     const name = country.name.toLowerCase();
                     const term = value.toLowerCase();
-                    return name.includes(value);
+                    return name.includes(term);
                 })
             );
         }
