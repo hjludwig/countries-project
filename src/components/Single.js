@@ -18,7 +18,6 @@ const Single = ({ singleCountry, setSingleCountry, countriesData }) => {
     } = singleCountry;
 
     const dark = useTheme().dark;
-    console.log(singleCountry);
     const classes = {
         wrapper: "max-w-7xl mx-auto",
         backButton: "shadow px-6 py-2 rounded-md flex gap-2 items-center",

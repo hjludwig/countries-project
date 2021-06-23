@@ -27,7 +27,6 @@ function App() {
     }, []);
 
     const handleChange = e => {
-        console.log(e.target);
         if (e.target.name === "region") {
             const selected = e.target.value;
             if (selected === "all") {
